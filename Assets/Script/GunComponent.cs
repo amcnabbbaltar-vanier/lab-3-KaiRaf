@@ -39,7 +39,7 @@ public class GunComponent : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position,
                             bulletSpawnPoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        float bulletImpulse = bulletMaxImpulse * chargeTime;
+        float bulletImpulse = bulletMaxImpulse * (chargeTime / maxChargeTime);
 
         rb.AddForce(bulletSpawnPoint.forward * bulletImpulse, ForceMode.Impulse);
 

@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
 
     public void IncrementScore()
     {
-        // TODO Increment Score 
+        // TODO Increment Score
+        ++Score;
         Debug.Log("Score : "+ Score);
     }
 }
